@@ -1,0 +1,11 @@
+#服务注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8765
+#注册名称
+spring:
+  application:
+    name: service-feign
