@@ -7,10 +7,11 @@
     <groupId>top.ljjapp</groupId>
     <artifactId>eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>pom</packaging><!--pom打包方式-->
 
     <name>eureka</name>
 
+    <!--继承springboot-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -18,11 +19,13 @@
         <relativePath/>
     </parent>
 
+    <!--聚合-->
     <modules>
-        <!--<module>eureka-server</module>-->
-        <!--<module>service-hi</module>-->
+        <module>eureka-server</module>
+        <module>service-hi</module>
     </modules>
 
+    <!--管理版本-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -38,6 +41,7 @@
         </dependency>
     </dependencies>
 
+    <!--统一子项目依赖版本-->
     <dependencyManagement>
         <dependencies>
             <dependency>
