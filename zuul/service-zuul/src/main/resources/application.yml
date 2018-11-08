@@ -1,0 +1,18 @@
+#服务注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8769
+spring:
+  application:
+    name: service-zuul
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**   #请求/api-a转发到ribbon
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**   #请求/api-a转发到feign
+      serviceId: service-feign
