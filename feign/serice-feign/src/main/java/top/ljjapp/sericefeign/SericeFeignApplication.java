@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @EnableDiscoveryClient
 @EnableFeignClients//开启feign
-@EnableHystrix//开启Hysstix
+//@EnableHystrix//开启Hysstix
 public class SericeFeignApplication {
 
     public static void main(String[] args) {
